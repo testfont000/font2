@@ -1,9 +1,6 @@
 #!/bin/bash
 
-
-
 # Определяем внешний IP-адрес
-
 external_ip=$(curl -s ifconfig.me)
 
 # Выводим результат
