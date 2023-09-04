@@ -100,4 +100,38 @@ myElement {
 		</div>
 	 </div>
 
+	
+	 <script>
+		// Функция для копирования текста в буфер обмена
+		function copyToClipboard(text) {
+		  navigator.clipboard.writeText(text)
+			 .then(() => {
+				alert('Исходный код элемента скопирован в буфер обмена!');
+			 })
+			 .catch((error) => {
+				console.error('Ошибка при копировании в буфер обмена:', error);
+			 });
+		}
+  
+		// Обработчик события клика на кнопке копирования
+		const myElement1 = document.getElementById('myElement1');
+		myElement1.addEventListener('click', function() {
+		  const element = document.getElementById('myElement');
+		  const sourceCode = element.outerHTML;
+		  copyToClipboard(sourceCode);
+		});
+	 </script>
+  
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
 
